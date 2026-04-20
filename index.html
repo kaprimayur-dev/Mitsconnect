@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="MitsConnect - A platform to build your dream hackathon team, find skilled developers, and collaborate on real-world projects.">
+    <title>MitsConnect | Build Your Dream Team</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Navbar Starts -->
+    <nav class="navsection">
+        <div class="logo"><a href="index.html" style="text-decoration: none; color: inherit;">MitsConnect</a></div>
+
+        <div class="navbuttons">
+            <a href="index.html">Home</a>
+            <div class="dropdown">
+                <span class="dropbtn">Teams ▾</span>
+                <div class="dropdown-content">
+                    <a href="teams.html">Create Team</a>
+                    <a href="teams.html?tab=browse">Join Team</a>
+                </div>
+            </div>
+            <a href="profile.html">Profile</a>
+            <a href="hackathons.html">Hackathons</a>
+        </div>
+
+        <div class="button">
+            <button onclick="window.location.href='login.html'">Login</button>
+        </div>
+    </nav>
+    
+    <!-- Hero Section Starts -->
+    <main>
+        <section class="hero slide-up">
+            <h1>Build Your Dream Team</h1>
+            <p>Connect with skilled developers in Machine Learning, Frontend, Backend, and more. Collaborate on real-world projects, participate in hackathons, and elevate your skills together.</p>
+
+            <div class="hero-buttons">
+                <button onclick="window.location.href='teams.html'">Create Team</button>
+                <button onclick="window.location.href='teams.html?tab=browse'">Join a Team</button>
+            </div>
+        </section>
+
+        <!-- Methodology Section -->
+        <section class="method slide-up">
+            <div class="method-header">
+                <h2>How It Works</h2>
+                <p>From signing up to deploying your project in 4 simple steps.</p>
+            </div>
+            
+            <div class="steps-container">
+        
+                <div class="steps-line"></div>
+                
+                <div class="step-item">
+                    <div class="step-circle">1</div>
+                    <h3>Create Profile</h3>
+                    <p>Sign up and verify your student or developer status.</p>
+                </div>
+                
+                <div class="step-item">
+                    <div class="step-circle">2</div>
+                    <h3>Add Skills</h3>
+                    <p>List your tech stack and past hackathon experiences.</p>
+                </div>
+                
+                <div class="step-item">
+                    <div class="step-circle">3</div>
+                    <h3>Find Teammates</h3>
+                    <p>Apply for teams or recruit specialists to your squad.</p>
+                </div>
+                
+                <div class="step-item">
+                    <div class="step-circle">4</div>
+                    <h3>Start Building</h3>
+                    <p>Open your dedicated workspace and win the hackathon.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section class="skillset slide-up">
+            <h2>In-Demand Skills</h2>
+            <div class="skills-container">
+                <div class="skill-card">Full-Stack Development</div>
+                <div class="skill-card">Machine Learning</div>
+                <div class="skill-card">UI/UX Design</div>
+                <div class="skill-card">Blockchain Development</div>
+            </div>
+            <div class="profile-cta">
+                <p>Update your skills in the profile section to receive better team recommendations.</p>
+                <a href="profile.html" class="profilebtn">Go to Profile &rarr;</a>
+            </div>
+        </section>
+
+        <!-- Teams Section -->
+        <section class="teams slide-up">
+            <h2>Teams Actively Recruiting</h2>
+            <div class="teams-container" id="home-teams-list">
+                <!-- Dynamically populated by home.js -->
+            </div>
+        </section>
+
+        <!-- Hackathon Section -->
+        <section class="hackaton-page slide-up">
+            <h2>Upcoming Hackathons</h2>
+            <div class="hack-container">
+                <div class="hack-cards">
+                    <h3>Smart India Hackathon</h3>
+                    <p><strong>Date:</strong> March 2026</p>
+                    <button onclick="window.location.href='hackathons.html'">View Details</button>
+                </div>
+                <div class="hack-cards">
+                    <h3>CodeFest 2026</h3>
+                    <p><strong>Date:</strong> April 2026</p>
+                    <button onclick="window.location.href='hackathons.html'">View Details</button>
+                </div>
+                <div class="hack-cards">
+                    <h3>CodeWars 2026</h3>
+                    <p><strong>Date:</strong> May 2026</p>
+                    <button onclick="window.location.href='hackathons.html'">View Details</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Choose Us Page -->
+        <section class="choose slide-up">
+            <h2>Why Choose MitsConnect?</h2>
+            <div class="choose-container">
+                <div class="choose-box">
+                    <h3>Streamlined Formation</h3>
+                    <p>More efficient team building than traditional platforms.</p>
+                </div>
+                <div class="choose-box">
+                    <h3>Trusted Community</h3>
+                    <p>Widely used by top student developers.</p>
+                </div>
+                <div class="choose-box">
+                    <h3>Direct Access</h3>
+                    <p>Get seamless links to register for upcoming hackathons.</p>
+                </div>
+                <div class="choose-box">
+                    <h3>Dedicated Mentorship</h3>
+                    <p>Experienced mentors are available to oversee your progress.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats Section -->
+        <section class="stats fade-in">
+            <div class="stat-container">
+                <div class="stat-item">
+                    <h3>500+</h3>
+                    <p>Teams Created</p>
+                </div>
+                <div class="stat-item">
+                    <h3>1,200+</h3>
+                    <p>Active Users</p>
+                </div>
+                <div class="stat-item">
+                    <h3>35+</h3>
+                    <p>Active Hackathons</p>
+                </div>
+                <div class="stat-item">
+                    <h3>95%</h3>
+                    <p>Satisfaction Rate</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta fade-in">
+            <h2>Ready to Build Something Great?</h2>
+            <p>Join MitsConnect today and start collaborating on real-world projects with talented developers.</p>
+            <div class="cta-buttons">
+                <a href="teams.html" class="cta-primary">Create Team</a>
+                <a href="teams.html?tab=browse" class="cta-secondary">Join Team</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-col">
+                <h3>MitsConnect</h3>
+                <p>Connecting students to build real-world projects together.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="profile.html">Profile</a></li>
+                    <li><a href="hackathons.html">Hackathons</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contact</h4>
+                <p>Email: support@mitsconnect.com</p>
+                <p>Location: India</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 MitsConnect. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="js/storage.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/home.js"></script>
+</body>
+
+</html>

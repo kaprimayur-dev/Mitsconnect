@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="MitsConnect - Discover upcoming hackathons and register your team.">
+    <title>MitsConnect | Hackathons</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navsection">
+        <div class="logo"><a href="index.html" style="text-decoration: none; color: inherit;">MitsConnect</a></div>
+        <div class="navbuttons">
+            <a href="index.html">Home</a>
+            <div class="dropdown">
+                <span class="dropbtn">Teams ▾</span>
+                <div class="dropdown-content">
+                    <a href="teams.html">Create Team</a>
+                    <a href="teams.html?tab=browse">Join Team</a>
+                </div>
+            </div>
+            <a href="profile.html">Profile</a>
+            <a href="hackathons.html">Hackathons</a>
+        </div>
+        <div class="button">
+            <button onclick="window.location.href='login.html'">Login</button>
+        </div>
+    </nav>
+
+    <main>
+        <section class="hackathon-section">
+            <h1>Upcoming Hackathons</h1>
+            <p class="page-subtitle">Explore hackathons, find the right one, and register with your team.</p>
+
+            <div class="hackathon-grid">
+                <div class="hackathon-card">
+                    <h3>Smart India Hackathon</h3>
+                    <p class="hack-date">📅 March 2026</p>
+                    <p class="hack-desc">India's biggest student innovation challenge. Build solutions for real government and industry problems across multiple themes.</p>
+                    <button onclick="registerForHackathon('Smart India Hackathon')">Register Team</button>
+                </div>
+
+                <div class="hackathon-card">
+                    <h3>CodeFest 2026</h3>
+                    <p class="hack-date">📅 April 2026</p>
+                    <p class="hack-desc">A 48-hour coding marathon focused on building innovative products. Open to all skill levels with mentorship support throughout.</p>
+                    <button onclick="registerForHackathon('CodeFest 2026')">Register Team</button>
+                </div>
+
+                <div class="hackathon-card">
+                    <h3>CodeWars 2026</h3>
+                    <p class="hack-date">📅 May 2026</p>
+                    <p class="hack-desc">Competitive programming meets product building. Solve algorithmic challenges and develop an end-to-end application.</p>
+                    <button onclick="registerForHackathon('CodeWars 2026')">Register Team</button>
+                </div>
+
+                <div class="hackathon-card">
+                    <h3>HackMIT India</h3>
+                    <p class="hack-date">📅 June 2026</p>
+                    <p class="hack-desc">An international-level hackathon partnered with MIT. Focus areas include AI, climate tech, and healthcare innovation.</p>
+                    <button onclick="registerForHackathon('HackMIT India')">Register Team</button>
+                </div>
+
+                <div class="hackathon-card">
+                    <h3>DevJam 2026</h3>
+                    <p class="hack-date">📅 July 2026</p>
+                    <p class="hack-desc">A design-first hackathon where UI/UX meets engineering. Build beautiful, functional products in a collaborative environment.</p>
+                    <button onclick="registerForHackathon('DevJam 2026')">Register Team</button>
+                </div>
+
+                <div class="hackathon-card">
+                    <h3>Blockchain Buildathon</h3>
+                    <p class="hack-date">📅 August 2026</p>
+                    <p class="hack-desc">Explore the world of Web3 and decentralized apps. Build smart contracts, DeFi tools, or NFT platforms over a weekend.</p>
+                    <button onclick="registerForHackathon('Blockchain Buildathon')">Register Team</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-col">
+                <h3>MitsConnect</h3>
+                <p>Connecting students to build real-world projects together.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="profile.html">Profile</a></li>
+                    <li><a href="hackathons.html">Hackathons</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contact</h4>
+                <p>Email: support@mitsconnect.com</p>
+                <p>Location: India</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 MitsConnect. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/storage.js"></script>
+    <script src="js/guard.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        /**
+         * Register for a hackathon.
+         * Shows a toast and redirects to the teams page
+         * so the user can create or join a team for that hackathon.
+         */
+        function registerForHackathon(hackathonName) {
+            const currentUser = getCurrentUser();
+            if (!currentUser) {
+                showToast('Please log in to register for a hackathon.', 'error');
+                setTimeout(() => { window.location.href = 'login.html'; }, 800);
+                return;
+            }
+            showToast(`Registered interest for "${hackathonName}". Create or join a team!`, 'success');
+            setTimeout(() => { window.location.href = 'teams.html'; }, 1200);
+        }
+    </script>
+</body>
+
+</html>

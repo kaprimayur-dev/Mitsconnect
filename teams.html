@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="MitsConnect - Create a new team or browse and join existing teams for hackathons.">
+    <title>MitsConnect | Teams</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navsection">
+        <div class="logo"><a href="index.html" style="text-decoration: none; color: inherit;">MitsConnect</a></div>
+        <div class="navbuttons">
+            <a href="index.html">Home</a>
+            <div class="dropdown">
+                <span class="dropbtn">Teams ▾</span>
+                <div class="dropdown-content">
+                    <a href="teams.html">Create Team</a>
+                    <a href="teams.html?tab=browse">Join Team</a>
+                </div>
+            </div>
+            <a href="profile.html">Profile</a>
+            <a href="hackathons.html">Hackathons</a>
+        </div>
+        <div class="button">
+            <button onclick="window.location.href='login.html'">Login</button>
+        </div>
+    </nav>
+
+    <main>
+        <section class="team-section">
+            <h1>Teams</h1>
+            <p class="page-subtitle">Create a new team or browse available teams to join.</p>
+
+            <!-- Tab Buttons -->
+            <div class="teams-tabs">
+                <button class="tab-btn active" data-tab="create-tab">Create Team</button>
+                <button class="tab-btn" data-tab="browse-tab">Available Teams</button>
+            </div>
+
+            <!-- Create Team Tab -->
+            <div id="create-tab" class="tab-panel active">
+                <form id="create-team-form" class="team-form">
+                    <div class="form-group">
+                        <label for="team-name">Team Name</label>
+                        <input type="text" id="team-name" placeholder="e.g. AI Innovators" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="team-description">Description</label>
+                        <textarea id="team-description" placeholder="Briefly describe your team's goal or project" required></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="team-looking-for">Required Skills</label>
+                        <input type="text" id="team-looking-for" placeholder="e.g. React, Python, UI/UX" required>
+                        <span class="form-hint">Separate skills with commas.</span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="team-max-members">Maximum Members</label>
+                        <input type="number" id="team-max-members" min="2" max="10" value="4" required>
+                        <span class="form-hint">Min 2, Max 10 members per team.</span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="team-hackathon">Target Hackathon</label>
+                        <select id="team-hackathon">
+                            <option value="">-- Select a hackathon (optional) --</option>
+                            <option value="Smart India Hackathon">Smart India Hackathon</option>
+                            <option value="CodeFest 2026">CodeFest 2026</option>
+                            <option value="CodeWars 2026">CodeWars 2026</option>
+                            <option value="HackMIT India">HackMIT India</option>
+                            <option value="DevJam 2026">DevJam 2026</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" class="team-submit-btn">Create Team</button>
+                </form>
+            </div>
+
+            <!-- Available Teams Tab -->
+            <div id="browse-tab" class="tab-panel">
+                <div class="teams-filter-bar">
+                    <input type="text" id="team-search" class="team-search-input" placeholder="Search by team name or skill...">
+                    <select id="team-skill-filter" class="team-filter-select">
+                        <option value="">All Skills</option>
+                        <option value="Frontend">Frontend</option>
+                        <option value="Backend">Backend</option>
+                        <option value="Machine Learning">Machine Learning</option>
+                        <option value="Design">Design</option>
+                    </select>
+                </div>
+                <div id="teams-list" class="teams-grid">
+                    <!-- Dynamically populated by teams.js -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-col">
+                <h3>MitsConnect</h3>
+                <p>Connecting students to build real-world projects together.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="profile.html">Profile</a></li>
+                    <li><a href="hackathons.html">Hackathons</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contact</h4>
+                <p>Email: support@mitsconnect.com</p>
+                <p>Location: India</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 MitsConnect. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/storage.js"></script>
+    <script src="js/guard.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/teams.js"></script>
+</body>
+
+</html>
